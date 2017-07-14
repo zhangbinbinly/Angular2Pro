@@ -53,9 +53,12 @@ export class ArticleDetailComponent implements OnInit {
 		private router: Router
 	) { }
 	ngOnInit() {
-		let id = this.aRoute.params
-			.switchMap((params: Params) => params['id'])
-			.subscribe(x => this.blog = this.bService.getSelectedBlog(+x))
+		// let id = this.aRoute.params
+		// 	.switchMap((params: Params) => params['id'])
+		// 	.subscribe(x => this.blog = this.bService.getSelectedBlog(+x))
+		let id=this.aRoute.params
+		.switchMap((params: Params) =>this.bService.getSelectedBlog(+params['id']))
+		.subscribe(x=>this.blog=x)
 	}
 	back() {
 		this.location.back();

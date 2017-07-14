@@ -4,11 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
-
+import { LoginComponent } from './login/login.component';
+import { TodoComponent } from "./todo/todo.component";
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'todo',
+    pathMatch: 'full'
+  },
+  {
+    path: 'todo',
+    component: TodoComponent
+  },
+  { path: 'login', component: LoginComponent },
   { path: 'article', component: ArticleComponent },
-  { path: '', redirectTo: "/article", pathMatch: 'full' }
+  { path: '', redirectTo: "/login", pathMatch: 'full' }
 ];
 
 @NgModule({

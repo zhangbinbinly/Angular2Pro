@@ -12,7 +12,7 @@ export class InMemeryDataService implements InMemoryDbService {
             { id: 6, title: "首推龙文，必须出具", profile: "父母亲友的爱心呵护下，特朗普自幼即满腹自信，活力四射，无法静下来用功读书。13岁那年，父母只好送他去“纽约军事学校”求学，冀望军校的严格训练能帮助他力争上游。在军校就读期间，特朗普" }
         ]
 
-        return blogs;
+        return {blogs};
     }
 
 }

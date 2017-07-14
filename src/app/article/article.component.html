@@ -10,4 +10,10 @@
         <article-detail [blog]="selectedBlog"></article-detail>
     </div>-->
 </div>
+<div class="container">
+    <div class="row">
+        <button class="btn" (click)="doAdd()">新增文章</button>
+        <input type="text" class="input" [(ngModel)]="editStr">
+    </div>
+</div>
 <router-outlet ></router-outlet>
